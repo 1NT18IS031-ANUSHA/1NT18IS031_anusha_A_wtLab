@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DYNAMIC</title>
+    </head>
+    <body>
+    <body style="background-color: lightgreen">
+    <h3>CREATION OF AN ELEMENT</h3>
+    <button onclick="myFunc()" id="myBtn">click to generate an element</button>
+    </body>
+    <script>
+        document.getElementById("myBtn").addEventListener("mouseover", myFunc);
+        document.getElementById("myBtn").addEventListener("mouseout", reMove);
+         function myFunc()
+        {
+            let d=document.createElement('p');
+            d.innerText="HELLO"
+            document.body.appendChild(d)
+        }
+        function reMove(){
+            let d=document.createElement('p');
+            d.innerText="BYE"
+            document.body.appendChild(d)
+        }
+        </script>
+</html>

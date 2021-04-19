@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>String</title>
+        <body>
+            <body style="background-color: yellowgreen"></body>
+            <MARQUEE><B><I> STRING FUNCTIONS </I></B></MARQUEE>
+            <b>Hello welcome to the orientation program </b>
+            <p>click on this button to find the length</p>
+            <button onclick="findLen()">length</button>
+            <p id="ln"></p>
+            <p>enter the element to find its first occurance </p>
+            <input type="text" id="fintxt" placeholder="enter the ele.." />
+            <button onclick="findTxt()">search</button>
+            <p id="tx"></p>
+            <p>click on this button to replace</p>
+            <button onclick="replace()">replace</button>
+            <p id="rep"></p>
+            <p>enter two elements to find the substring</p>
+            <input type="number" id="sub1" placeholder="enter the fir.." />&nbsp;<input type="number" id="sub2" placeholder="enter the sec.." />
+            <button onclick="substring()">search</button>
+            <p id="sub"></p>
+        </body>
+    <script>
+        var str = "Hello welcome to the orientation program";
+        function findLen(){
+            var stlen = str.length;
+            document.getElementById("ln").innerHTML = stlen;
+        }
+        function findTxt(){
+            var txt = document.getElementById("fintxt").value;
+            console.log(txt)
+            var pos = str.search(`${txt}`)
+            document.getElementById("tx").innerHTML = pos;
+        }
+        function replace(){
+            var st = str.replace;
+            var txt = str.replace("orientation","introduction");
+            document.getElementById("rep").innerHTML = txt;
+        }
+        function substring(){
+            var num1 = document.getElementById("sub1").value;
+            var num2 = document.getElementById("sub2").value;
+            console.log(num1);
+            console.log(num2);
+            var res = str.slice(num1,num2);
+            console.log(res)
+            document.getElementById("sub").innerHTML = res;
+        }
+        </script>
+</head>
+</html>
