@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> MULTIPLE BOXES </title>
+        <style>
+      #first {
+  width: 500px;
+  height: 500px;
+  background: red;
+  position: relative;
+}
+#first #second {
+  width: 50%;
+  height: 50%;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#second #third {
+  width: 40%;
+  height: 40%;
+  background: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#third #fourth {
+  width: 30%;
+  height: 30%;
+  background: blueviolet;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+        </style>
+    </head>
+        <body>
+            <body style="background-color: lightgoldenrodyellow;"></body>
+            <div id="first">
+              <div id="second">
+                <div id="third">
+                  <div id="fourth">
+                  </div>
+                </div>
+               </div>
+            </div>
+        <script>
+             const first = document.getElementById("first");
+      const second = document.getElementById("second");
+      const third = document.getElementById("third");
+      const fourth = document.getElementById("fourth");
+
+   let flag = false;
+   first.addEventListener('mouseenter', ()=>{
+       console.log("Entered area 1");
+   });
+
+   second.addEventListener('mouseenter', ()=>{
+       console.log("Entered area 2");
+   });
+
+   third.addEventListener('mouseenter', ()=>{
+       console.log("Close to the target");
+   });
+
+   fourth.addEventListener('mouseenter', ()=>{
+       console.log("Final target reached !");
+   });
+
+        </script>
+        </body>
+</HTML>
