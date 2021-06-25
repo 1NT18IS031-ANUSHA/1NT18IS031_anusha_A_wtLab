@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <style>
+      body{
+        background-color: lightblue;
+    }
+   </style>
+<body>
+
+    <p>Enter a 10-digit password :</p>
+    
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">ENTER</button>
+    <p id="e"></p>
+    
+</body>
+<script>
+  function myFunction() 
+  {
+    var message, x;
+    message = document.getElementById("e");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try {
+      x = Number(x);
+      if(x == "") throw "invalid";
+      if(isNaN(x)) throw "ERROR";
+      if(x == 1234567890) throw "Correct input";
+      if(x<1234567890) throw "input low";
+      if(x>1234567890) throw "input high";
+      }
+    catch(err) {
+      message.innerHTML = "" + err;
+    }
+  }
+  </script>
+</html>
+<html>
+<head>
+     
+      <script type = "text/javascript">
+            function myFunc() {
+               var a = 100;
+               var b = 0;
+               
+               try {
+                  if ( b == 0 ) {
+                     throw( "Divide by zero error." );
+                  } else {
+                     var c = a / b;
+                  }
+               }
+               catch ( e ) {
+                  alert("Error: " + e );
+               }
+            }
+      </script>
+     
+   </head>
+   <body>
+      <p>Click the following to see the result:</p>
+     
+      <form>
+         <input type = "button" value = "Click Me" onclick = "myFunc();" />
+      </form>
+     
+   </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QUERYSELECTORFORALL</title>
+<body>
+<style>
+    h1{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    p{
+        font-family:cursive;
+    }
+    p1{
+        font-family:'Times New Roman', Times, serif;
+    }
+    body{
+        background-color: darksalmon;
+    }
+    button{
+        background-color: blue;
+        color: grey;
+    }
+    
+</style>
+</head>
+<h1 class="example"><B><I>FAVOURITE COLOUR</I></B></h1>
+<p class="example">BLACK,PURPLE</p> 
+<h1 class="eg"><B><I>FAVOURITE FOOD</I></B></h1>
+<p class="eg">ICE CREAM</p>
+<h1 class="examp"><B><I>FAVOURITE TRAVEL DESTINATION</I></B></h1>
+<p class="examp">SPAIN</p>
+<h1 class="eg1"><B><I>FAVOURITE SPORT</I></B></h1>
+<p class="eg1">CRICKET</p>
+
+<p1>Click on this button to add a background color to all the elements with class.</p1>
+
+<button onclick="myFunction()">CLICK</button>
+
+<script>
+function myFunction() {
+  var x, i;
+  x = document.querySelectorAll(".example");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "lightblue";
+  }
+    x = document.querySelectorAll(".eg");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "pink";
+  }
+  x = document.querySelectorAll(".examp");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "yellow";
+  }
+  x = document.querySelectorAll(".eg1");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "lightgreen";
+  }
+}
+
+</script>
+</body>
+</html>

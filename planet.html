@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UNIVERSE</title>
+
+<script>
+    function PLANET(name , position , color , distance , radius , gravity ) {
+      this.name = name;
+      this.position = position;
+      this.color = color;
+      this.distance = distance;
+      this.radius = radius;
+      this.gravity = gravity;
+      this.display = function(){
+      document.getElementById("dsp").innerHTML = `Hi! My name is  ${this.name}. <br> I am in the ${this.position} position of the orbit. <br> I am ${this.color} in colour. <br> The distance between me and the Sun is ${this.distance}.<br> I am in ${this.radius} radius. <br> My pull is ${this.gravity}.`
+      }
+     }
+
+    function f1(){
+   let P1 = new PLANET("Mercury" , "First" , "Red", "52.805 million km", "2439.7 km", "3.7 m/s^2");
+   var p1 = "https://www.flare.com/wp-content/uploads/2018/11/INLINE-2.jpg";
+   document.getElementById('mer').src = p1.replace();
+   P1.display();
+     }
+
+    function f2(){   
+   let P2 = new PLANET("Venus" , "Second" , "Bright White", "107.68 million km", "6051.8 km", "8.87 m/s^2");
+   var p2 = "https://media.nature.com/lw800/magazine-assets/d41586-020-02785-5/d41586-020-02785-5_18436254.jpg";
+   document.getElementById('mer').src = p2.replace();
+   P2.display();
+    }
+    function f3(){
+   let P3 = new PLANET("Earth" , "Third" , "Blue", "149.8 million km", "6378 km", "9.81 m/s^2");
+   var p3 = "https://cdn.mos.cms.futurecdn.net/n3jFt7cqbddTJa3fKhPzja-1200-80.jpg";
+   document.getElementById('mer').src = p3.replace();
+   P3.display();
+    }
+    function f4(){
+   let P4 = new PLANET("Mars" , "Fourth" , "Red", "248.28 million km", "3389.5 km", "3.72 m/s^2");
+   var p4 = "https://static.scientificamerican.com/sciam/cache/file/55E33AA4-906B-4473-BEB0A2F0CAB1F062_source.jpg?w=590&h=800&BA5665D0-AA86-401B-B85C43D7C2390329";
+   document.getElementById('mer').src = p4.replace();
+   P4.display();
+    }
+    function f5(){
+   let P5 = new PLANET("Jupiter" , "Fifth" , "Yellowish Orange", "756.23 million km", "69911 km", "24.79 m/s^2");
+   var p5 = "https://earthsky.org/upl/2019/09/jupiter-juno-2-12-2019-e1567611570663.jpg";
+   document.getElementById('mer').src = p5.replace();
+   P5.display();
+    }
+    function f6(){
+   let P6 = new PLANET("Saturn" , "Sixth" , "Yellow Brown", "1427 million km", "58232 km", "10.44 m/s^2");
+   var p6 = "https://solarsystem.nasa.gov/system/news_items/main_images/12983_7504_PIA21046_1280.jpg";
+   document.getElementById('mer').src = p6.replace();
+   P6.display();
+    }
+    function f7(){
+   let P7 = new PLANET("Uranus" , "Seventh" , "Bluish Green", "2871 million km", "25362 km", "8.87 m/s^2");
+   var p7 = "https://ychef.files.bbci.co.uk/976x549/p0257vk5.jpg";
+   document.getElementById('mer').src = p7.replace();
+   P7.display();
+    }
+    function f8(){
+   let P8 = new PLANET("Neptune" , "Eigth" , "Blue", "4497.1 million km", "24622 km", "11.15 m/s^2");
+   var p8 = "https://i.insider.com/5afeef24bd6fc224068b4e9e?width=1065&format=jpeg";
+   document.getElementById('mer').src = p8.replace();
+   P8.display();
+    }
+    </script>
+    </head>
+
+<body>
+  <style>
+    body {
+      background-image: url(http://cdn.wallpaperhi.com/1920x1080/20130108/outer%20space%201920x1080%20wallpaper_www.wallpaperhi.com_53.jpg);
+    }
+    button{
+        background-color:BLACK;
+        color:WHITE;
+    }
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif ;
+        color: lavender;
+    }
+    p#dsp{
+      color:white ;
+    }
+    .wh{
+      width:50%;
+      height: 50%;
+    }
+    </style>
+  <h1 style="text-align: center ;"><B>PLANETS</B></h1>
+  <div style="margin-top: 50px; text-align: center; justify-items: stretch; justify-self: stretch; ">
+<button onclick="f1()">MERCURY</button>&nbsp;&nbsp;&nbsp;
+<button onclick="f2()">VENUS</button>&nbsp;&nbsp;&nbsp;
+<button onclick="f3()">EARTH</button>&nbsp;&nbsp;&nbsp;
+<button onclick="f4()">MARS</button>&nbsp;&nbsp;&nbsp;
+<button onclick="f5()">JUPITER</button>&nbsp;&nbsp;&nbsp;
+<button onclick="f6()">SATURN</button>&nbsp;&nbsp;&nbsp;
+<button onclick="f7()">URANUS</button>&nbsp;&nbsp;&nbsp;
+<button onclick="f8()">NEPTUNE</button>&nbsp;&nbsp;&nbsp;
+<br><br>
+<p id="dsp"></p>
+<img id="mer" src="https://www.teachwire.net/uploads/news/iStock-910174036.jpg" style="width: 35%;height: 40%;"/>"
+</div>
+    </body>
+    </html>
